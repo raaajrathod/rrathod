@@ -7,6 +7,7 @@ import LeftContent from './components/LeftContent';
 import RightContent from './components/RightContent';
 import Hero from './components/Hero';
 import About from './components/About';
+import Jobs from './components/Jobs';
 function App() {
 
 
@@ -19,6 +20,7 @@ function App() {
           <div className="main_content">
             <Hero />
             <About />
+            <Jobs />
           </div>
 
           <RightContent />
