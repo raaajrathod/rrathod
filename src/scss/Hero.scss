@@ -1,0 +1,41 @@
+.hero {
+    background-color: $navy;
+    padding: 20px;
+    text-align: Left;
+    height: 100vh;
+
+    .big-heading {
+        font-weight: 600;
+        line-height: 1.1;
+        margin: 20px 0px;
+    }
+
+    h2 {
+        font-size: clamp(40px, 8vw, 80px);
+        color: $lightest-slate;
+    }
+
+    h3 {
+        color: $slate;
+        font-size: clamp(40px, 7vw, 70px);
+    }
+
+    p {
+        margin: 20px 0px 0px;
+        max-width: 540px;
+        font-size: $fz-md;
+    }
+
+    .get-in-touch {
+        margin-top: 50px;
+        padding: 1.25rem 1.75rem;
+    }
+}
+
+.greeting-text {
+    font-size: $fz-sm;
+    color: $green;
+    text-align: left;
+    margin-bottom: 1rem;
+    margin-top: 100px !important;
+}
