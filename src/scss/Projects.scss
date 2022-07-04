@@ -1,0 +1,112 @@
+.projects {
+    text-align: Left;
+    counter-increment: item 1;
+    max-width: 900px;
+    min-height: 100vh;
+
+    .project-list-item {
+        position: relative;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(12, 1fr);
+        -webkit-box-align: center;
+        align-items: center;
+        margin: 100px 0px;
+
+        &:first-child {
+            margin-top: 0px;
+        }
+
+        .project-content {
+            position: relative;
+            grid-area: 1 / 1 / -1 / 7;
+        }
+
+        &:nth-of-type(2n + 1) {
+            .project-content {
+                grid-column: 7 / -1;
+                text-align: right;
+            }
+
+            .project-image {
+                grid-column: 1 / 8;
+            }
+
+            .project-techlist {
+                justify-content: flex-end;
+            }
+        }
+
+        .project-image {
+            box-shadow: 0 10px 30px -15px $navy-shadow;
+            transition: $transition;
+            grid-area: 1 / 6 / -1 / -1;
+            position: relative;
+            z-index: 1;
+
+            // &:nth-of-type(2n + 1) {
+            //     grid-area: 1 / 8;
+            // }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(100, 255, 218, 0.5);
+                opacity: 1;
+                transition: $transition;
+                border-radius: 5px;
+            }
+
+            &:hover {
+                &::after {
+                    opacity: 0;
+                }
+            }
+
+            img {
+                border-radius: 5px;
+            }
+        }
+
+        .project-description {
+            box-shadow: 0 10px 30px -15px $navy-shadow;
+            transition: $transition;
+            position: relative;
+            z-index: 2;
+            padding: 25px;
+            border-radius: $border-radius;
+            background-color: $light-navy;
+            color: $light-slate;
+            font-size: $fz-lg;
+        }
+
+        .project-techlist {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+
+            // Skipping First li
+            li:first-child {
+                margin-left: 0;
+            }
+            li {
+                margin: 20px 10px;
+                font-size: $fz-md;
+                font-family: $font-mono;
+                color: $light-slate;
+            }
+        }
+
+        .project-title {
+            margin-bottom: 20px;
+        }
+    }
+}

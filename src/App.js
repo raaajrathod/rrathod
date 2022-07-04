@@ -8,6 +8,7 @@ import RightContent from './components/RightContent';
 import Hero from './components/Hero';
 import About from './components/About';
 import Jobs from './components/Jobs';
+import Projects from './components/Projects';
 function App() {
 
 
@@ -21,6 +22,7 @@ function App() {
             <Hero />
             <About />
             <Jobs />
+            <Projects />
           </div>
 
           <RightContent />
