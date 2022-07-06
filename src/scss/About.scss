@@ -7,8 +7,6 @@
     counter-increment: item 1;
     max-width: 900px;
 
-   
-
     .about_content {
         display: flex;
         flex-direction: row;
@@ -17,12 +15,21 @@
         justify-content: flex-start;
         align-items: flex-start;
 
+        @media only screen and (max-width: 500px) {
+            flex-direction: column-reverse;
+        }
+
         .content {
             width: 60%;
             background-color: $navy;
             font-size: $fz-md;
             font-weight: 400;
             line-height: 1.5;
+
+            @media only screen and (max-width: 500px) {
+                width: 100% !important;
+                margin-top: 50px;
+            }
 
             a {
                 color: $green;
@@ -110,6 +117,10 @@
                 height: 100%;
                 background-color: rgba(100, 255, 218, 0.5);
                 transition: $transition;
+
+                @media only screen and (max-width: 500px) {
+                    background-color: rgba(0, 0, 0, 0);
+                }
 
                 &:hover {
                     background-color: rgba(0, 0, 0, 0);

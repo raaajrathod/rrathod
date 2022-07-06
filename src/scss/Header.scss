@@ -7,7 +7,7 @@ header {
     align-items: center;
     position: fixed;
     top: 0px;
-    z-index: 11;
+    z-index: 999;
     // padding: 0px 100px;
     width: 100%;
     height: $nav-height;
@@ -18,7 +18,8 @@ header {
     pointer-events: auto !important;
     user-select: auto !important;
 
-    nav {
+    nav.desktop-navigation {
+        // display: none !important;
         padding: 0px 100px;
         display: flex;
         -webkit-box-pack: justify;
@@ -34,6 +35,7 @@ header {
 
         .logo {
             display: block;
+            font-size: $fz-xxl;
 
             a,
             a:hover,
@@ -52,6 +54,25 @@ header {
             justify-content: space-between;
             width: 100%;
             height: 100%;
+        }
+
+        @media only screen and (max-width: 500px) {
+            padding: 0px 50px;
+            .nav-links,
+            .resume-btn-container {
+                display: none !important;
+            }
+        }
+
+        .mobile-nav-toggle-btn {
+            display: none;
+            color: $green;
+            width: 30px;
+            height: 30px;
+
+            @media only screen and (max-width: 500px) {
+                display: block;
+            }
         }
     }
 }
@@ -108,4 +129,126 @@ a {
 .resume-button {
     padding: 0.75rem 1rem;
     margin-left: 15px;
+}
+
+.mobile-navigation-menu {
+    position: fixed;
+    width: 100%;
+    height: 120vh;
+    right: 0px;
+    background-color: $light-navy;
+    z-index: 999;
+    overflow: hidden;
+    transform: translateX(100%);
+
+    // &.active {
+    //     display: block;
+    // }
+
+    // &.inactive {
+    //     display: none !important;
+    // }
+
+    .close-button-container {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        color: $green;
+        align-items: right;
+        right: 50px;
+        top: 30px;
+    }
+
+    .nav-links {
+        margin: 40px 10px;
+        padding: 10px;
+        ol {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            flex-wrap: nowrap;
+            align-content: stretch;
+
+            li {
+                margin: 0px 5px;
+                padding: 20px;
+                position: relative;
+                counter-increment: item 1;
+                font-size: $fz-md;
+                font-family: $font-mono;
+
+                a {
+                    padding: 10px;
+                    color: $white;
+
+                    &::before {
+                        content: "0" counter(item) ".";
+                        margin-right: 5px;
+                        color: $green;
+                        font-size: $fz-md;
+                        text-align: right;
+                        font-family: $font-mono;
+                    }
+
+                    &:hover {
+                        color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    .resume-btn-container-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px;
+        a {
+            padding: 20px 40px;
+        }
+    }
+}
+
+.slide-in {
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+}
+
+.slide-out {
+    animation: slide-out 0.5s forwards;
+    -webkit-animation: slide-out 0.5s forwards;
+}
+
+@keyframes slide-in {
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@-webkit-keyframes slide-in {
+    100% {
+        -webkit-transform: translateX(0%);
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@-webkit-keyframes slide-out {
+    0% {
+        -webkit-transform: translateX(0%);
+    }
+    100% {
+        -webkit-transform: translateX(100%);
+    }
 }

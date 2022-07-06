@@ -1,0 +1,19 @@
+.contact {
+    text-align: Left;
+    counter-increment: item 1;
+    max-width: 700px;
+    min-height: 50vh;
+
+    .contact-content {
+        p {
+            color: $secondary;
+            font-size: $fz-md;
+            line-height: 1.5;
+        }
+
+        .say-hello {
+            padding: 20px;
+            margin: 20px 0px;
+        }
+    }
+}
