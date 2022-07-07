@@ -39,6 +39,11 @@
                     color: $lightest-slate;
                     text-align: left;
                     padding: 0px 25px;
+
+                    svg {
+                        height: 25px;
+                        width: 25px;
+                    }
                 }
             }
 
@@ -235,9 +240,16 @@
                     color: $green;
                     font-family: $font-mono;
                     svg {
-                        font-size: $fz-md;
+                        // font-size: $fz-md;
                         height: 40px;
                         width: 40px;
+                    }
+                }
+
+                .project-card-links {
+                    svg {
+                        height: 25px;
+                        width: 25px;
                     }
                 }
             }
