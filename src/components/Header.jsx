@@ -45,6 +45,9 @@ const Header = () => {
                 </nav>
             </header >
             <div className={`mobile-navigation-menu ${isOpen === true ? "slide-in" : isOpen === false ? "slide-out" : ""} `}>
+
+
+
                 <div className="close-button-container">
                     <X onClick={toggleMenu} />
                 </div>

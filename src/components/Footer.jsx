@@ -6,11 +6,16 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer-content">
                 <ul className='social-media-footer'>
-                    <li><GitHub /></li>
-                    <li><Linkedin /></li>
-                    <li>< Twitter /></li>
-                    <li><Instagram /></li>
-                    <li><Facebook /></li>
+                    <li>
+                        <a href="http://github.com/raaajrathod" target="_blank" rel="noreferrer" > <GitHub /></a></li>
+                    <li>
+                        <a href="http://linkedin.com/in/raaajrathod" target="_blank" rel="noreferrer" > <Linkedin /></a></li>
+                    <li>
+                        <a href="http://twitter.com/raaajrathod" target="_blank" rel="noreferrer" > <Twitter /></a></li>
+                    <li>
+                        <a href="http://instagram.com/raaajrathod" target="_blank" rel="noreferrer" > <Instagram /></a></li>
+
+                    <li>  <a href="http://facebook.com/raaajrathod" target="_blank" rel="noreferrer" > <Facebook /></a></li>
                 </ul>
                 <p>Built with <i><Heart /></i> by Raj Rathod</p>
             </div>
