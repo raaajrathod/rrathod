@@ -15,7 +15,8 @@ const Header = () => {
             <header className='header'>
                 <nav className="desktop-navigation">
                     <div className="logo">
-                        <a href="/">R</a>
+
+                        <a href="#home"><img src="/img/logo.png" alt="Raj Rathod" /></a>
                     </div>
                     <div className="navigations">
                         <div className="nav-links desktop-nav">

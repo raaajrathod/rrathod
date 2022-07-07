@@ -4,7 +4,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const Hero = () => {
     return (
-        <section className="hero" id="/home">
+        <section className="hero" id="home">
             <div className="hero_content">
                 <p className="greeting-text">
                     Hi, my name is
