@@ -15,7 +15,7 @@ const Hero = () => {
                     </h2>
                 </div>
                 <div>
-                    <h3 className="big-heading">I Love to put life to Web App.</h3>
+                    <h3 className="big-heading">I love to put life to Web App.</h3>
                 </div>
                 <div>
                     <p> I'm a Electronics and Telecommunication Engineer, building my career as a passionate and self-taught Frontend Developer. I am currently focused on completing my Cyber Security Masters in September 2022 and also actively looking for full-time Job.</p>
