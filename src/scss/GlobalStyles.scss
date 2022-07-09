@@ -217,8 +217,7 @@ h6 {
 }
 
 img,
-svg,
-.gatsby-image-wrapper {
+svg {
     width: 100%;
     max-width: 100%;
     vertical-align: middle;
@@ -427,9 +426,6 @@ code {
     }
 }
 
-.gatsby-image-outer-wrapper {
-    height: 100%;
-}
 
 .outline-btn {
     color: $green;
