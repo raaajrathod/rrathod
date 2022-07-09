@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 
+import { Fade } from "react-awesome-reveal";
 const Tabs = () => {
 
     const [currentTab, setCurrentTab] = useState(1);
@@ -55,40 +56,42 @@ const Tabs = () => {
 
     return (
         <div className='container'>
-            <div className="tab-container">
-                <div className='tabs'>
-                    {tabs.map((tab, i) =>
-                        <button key={i} id={tab.id} disabled={currentTab == `${tab.id}`} onClick={(handleTabClick)}>{tab.tabTitle}</button>
-                    )}
+            <Fade direction="bottom" triggerOnce={true}>
+                <div className="tab-container">
+                    <div className='tabs'>
+                        {tabs.map((tab, i) =>
+                            <button key={i} id={tab.id} disabled={currentTab == `${tab.id}`} onClick={(handleTabClick)}>{tab.tabTitle}</button>
+                        )}
+                    </div>
+                    <div className='content'>
+                        {tabs.map((tab, i) => {
+                            return (
+                                <Fade direction="bottom">
+                                    <div key={i} className={`tab-content ${currentTab == tab.id ? "fadeIn" : "fadeOut"}`}>
+                                        <h3>
+                                            <span>{tab.tabTitle}</span>
+                                            <span className='company'>
+                                                {" "}@{" "}
+                                                <a href={tab.comapanyURL} className='inline-link'>{tab.company}</a>
+                                            </span>
+                                        </h3>
+                                        <p className="range">
+                                            {tab.range}
+                                        </p>
+                                        <div>
+                                            <ul>
+                                                {tab.content.map((content, i) => {
+                                                    return <li key={i}><p>{content}</p></li>
+                                                })}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </Fade>)
+                        }
+                        )}
+                    </div>
                 </div>
-                <div className='content'>
-                    {tabs.map((tab, i) => {
-                        return (<div key={i} className={`tab-content ${currentTab == tab.id ? "fadeIn" : "fadeOut"}`}>
-                            <h3>
-                                <span>{tab.tabTitle}</span>
-                                <span className='company'>
-                                    {" "}@{" "}
-                                    <a href={tab.comapanyURL} className='inline-link'>{tab.company}</a>
-                                </span>
-                            </h3>
-                            <p className="range">
-                                {tab.range}
-                            </p>
-                            <div>
-                                <ul>
-                                    {tab.content.map((content, i) => {
-                                        return <li key={i}><p>{content}</p></li>
-                                    })}
-                                </ul>
-                            </div>
-                        </div>)
-                    }
-
-                    )}
-
-                </div>
-            </div>
-
+            </Fade >
         </div >
     );
 }

@@ -1,6 +1,8 @@
 import { X, AlignRight } from "react-feather";
 import { Fragment, useState } from "react";
 
+import { Fade } from "react-awesome-reveal";
+
 const Header = () => {
 
     const [isOpen, setIsOpen] = useState(null);
@@ -21,23 +23,26 @@ const Header = () => {
                     <div className="navigations">
                         <div className="nav-links desktop-nav">
                             <ol>
-                                <li>
-                                    <a href="#about">About</a>
-                                </li>
-                                <li>
-                                    <a href="#jobs">Experience</a>
-                                </li>
-                                <li>
-                                    <a href="#projects">Projects</a>
-                                </li>
-                                <li>
-                                    <a href="#contact">Contact</a>
-                                </li>
+                                <Fade cascade direction="top" triggerOnce={true} duration={600}>
+                                    <li>
+                                        <a href="#about">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="#jobs">Experience</a>
+                                    </li>
+                                    <li>
+                                        <a href="#projects">Projects</a>
+                                    </li>
+                                    <li>
+                                        <a href="#contact">Contact</a>
+                                    </li>
+                                </Fade>
                             </ol>
                         </div>
-                        <div className="resume-btn-container">
-                            <a href="/resume.pdf" className='resume-button outline-btn' target="_blank" rel="noopener norefferer">Resume</a>
-                        </div>
+                        <Fade cascade direction="top" triggerOnce={true} delay={1200}>
+                            <div className="resume-btn-container">
+                                <a href="/resume.pdf" className='resume-button outline-btn' target="_blank" rel="noopener norefferer">Resume</a>
+                            </div></Fade>
                         <div className="mobile-nav-toggle-btn">
                             <AlignRight onClick={toggleMenu} />
                         </div>

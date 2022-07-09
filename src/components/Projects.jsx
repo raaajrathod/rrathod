@@ -2,6 +2,8 @@
 import { GitHub, Folder } from "react-feather";
 
 
+import { Fade } from "react-awesome-reveal";
+
 
 const Projects = () => {
 
@@ -65,61 +67,66 @@ const Projects = () => {
 
     return (
         <section className="projects" id="projects">
-            <div className="projects_content">
-                <h2 className="numbered-heading">Some of my Projects.</h2>
-            </div>
+            <Fade direction="bottom" triggerOnce={true}>
+                <div className="projects_content">
+                    <h2 className="numbered-heading">Some of my Projects.</h2>
+                </div>
+            </Fade>
             <ul className="project-list">
                 {featuredProjects.map((project, index) => {
 
-                    return (<li className="project-list-item" key={index}>
-                        <div className="project-content">
-                            <h3 className="project-title">{project.title}</h3>
-                            <div className="project-description">
-                                <p>{project.description}</p>
-                            </div>
-                            <ul className="project-techlist">
-                                {project.tech.map((tech, i) =>
-                                    <li className="project-techlist-item" key={i}>{tech}</li>
-                                )}
-                            </ul>
-                            <div className="links">
-                                <a href={project.gitHub}><GitHub /></a>
-                            </div>
-                        </div>
-                        <div className="project-image">
-                            <div className="image-wrapper">
-                                <img src={project.image} alt={project.title} />
-                            </div>
-                        </div>
+                    return (
+                        <Fade direction="bottom" triggerOnce={true}>
+                            <li className="project-list-item" key={index}>
+                                <div className="project-content">
+                                    <h3 className="project-title">{project.title}</h3>
+                                    <div className="project-description">
+                                        <p>{project.description}</p>
+                                    </div>
+                                    <ul className="project-techlist">
+                                        {project.tech.map((tech, i) =>
+                                            <li className="project-techlist-item" key={i}>{tech}</li>
+                                        )}
+                                    </ul>
+                                    <div className="links">
+                                        <a href={project.gitHub}><GitHub /></a>
+                                    </div>
+                                </div>
+                                <div className="project-image">
+                                    <div className="image-wrapper">
+                                        <img src={project.image} alt={project.title} />
+                                    </div>
+                                </div>
 
-                    </li>)
+                            </li>
+                        </Fade>)
                 })}
             </ul>
-            <h2 className="subsection-header">Other Noteworthy Projects</h2>
-            <ul className="project-card-container">
-                {noteworthyProjects.map((project, index) => {
-                    return (<li className="project-card" key={index}>
-                        <div className="project-card-content">
-                            <div className="project-card_top"> <div className="folder-icon"><Folder /></div>
-                                <div className="project-card-links">
-                                    <a href={project.gitHub}><GitHub /></a>
-                                </div></div>
-                            <div className="project-card-header">
-                                <h3 className="project-card-title"> <a href={project.gitHub}>{project.title}</a></h3>
+            <Fade direction="bottom" triggerOnce={true}>
+                <h2 className="subsection-header">Other Noteworthy Projects</h2>
+                <ul className="project-card-container">
+                    {noteworthyProjects.map((project, index) => {
+                        return (<li className="project-card" key={index}>
+                            <div className="project-card-content">
+                                <div className="project-card_top"> <div className="folder-icon"><Folder /></div>
+                                    <div className="project-card-links">
+                                        <a href={project.gitHub}><GitHub /></a>
+                                    </div></div>
+                                <div className="project-card-header">
+                                    <h3 className="project-card-title"> <a href={project.gitHub}>{project.title}</a></h3>
 
+                                </div>
+                                <p className="project-card-description">{project.description}</p>
+                                <ul className="project-techlist">
+                                    {project.tech.map((tech, i) =>
+                                        <li className="project-techlist-item" key={i}>{tech}</li>
+                                    )}
+                                </ul>
                             </div>
-                            <p className="project-card-description">{project.description}</p>
-                            <ul className="project-techlist">
-                                {project.tech.map((tech, i) =>
-                                    <li className="project-techlist-item" key={i}>{tech}</li>
-                                )}
-                            </ul>
-                        </div>
-                    </li>)
-                })}
-
-
-            </ul>
+                        </li>)
+                    })}
+                </ul>
+            </Fade>
         </section >
     )
 }
