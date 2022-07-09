@@ -12,20 +12,20 @@ const Projects = () => {
         description: "A tour booking website allows users to book tours and view tour details and also gives the user the ability to review their tour booking. There are different roles for Users, Tour Guides and Administrators.",
         tech: ["Node JS", "Mongoose", "Express"],
         gitHub: "https://github.com/raaajrathod/tours-ecomm-node-js",
-        image: "./../img/tours.png"
+        image: "./../img/tours.webp"
     },
     {
         title: "Crown Store",
         description: "An e-commerce application built on ReactJS. It allows the user to view the products, add to cart, checkout and view the cart & modify the cart. Stripe is used for payment processing. Backend is built on Firebase. User can also login with their Google account.",
         tech: ["ReactJS", "Firebase", "Redux", "SASS"],
         gitHub: "https://github.com/raaajrathod/e-commerce-udemy-v2",
-        image: "./../img/crown-store.png"
+        image: "./../img/crown-store.webp"
     }, {
         title: "Dev Connector",
         description: "A Social Networking website for Developer which allows devs to connect with other users and share their knowledge. It also allows user to create their own profile based on their Education, Work Experience, Skills and Social Links. Users can also comment on other users' posts and also like other users' posts.",
         tech: ["ReactJS", "NodeJS", "Express", "MongoDB", "JWT"],
         gitHub: "https://github.com/raaajrathod/dev-social-connector",
-        image: "./../img/dev-connector.png"
+        image: "./../img/dev-connector.webp"
     }];
 
     const noteworthyProjects = [

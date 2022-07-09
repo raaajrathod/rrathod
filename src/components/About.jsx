@@ -29,7 +29,7 @@ const About = () => {
                         <div className="wrapper">
                             <div className="inner-wrapper"></div>
                             <div className="img-container">
-                                <img src="../img/profile_img.jpg" alt="profile" />
+                                <img src="../img/profile_1.webp" alt="profile" />
                             </div>
                             <div className="profile-photo-overlay"></div>
                         </div>

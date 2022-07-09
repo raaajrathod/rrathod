@@ -14,7 +14,6 @@ const Tabs = () => {
             location: 'London',
             range: "April 2022 - Present",
             content: [
-                "I spearheaded the redevelopment of the company's website and oversaw the migration of the company's content to the new website.",
                 "Analysed the company's website and identified the issues with the current website and identified the best solution for the issues.",
                 "Developed the new website using the WordPress CMS and oversaw the migration of the company's content to the new website.",
                 "Proposed and implemented solutions to the issues identified in the website related to design and Marketing.",
