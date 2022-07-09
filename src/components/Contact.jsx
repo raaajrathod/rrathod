@@ -4,7 +4,7 @@ import { Fade } from "react-awesome-reveal";
 const Contact = () => {
     return (
         <section className="contact" id="contact">
-            <Fade direction="bottom" triggerOnce={true}>
+            <Fade direction="bottom" triggerOnce={true} delay={200}>
                 <div className="contact-content">
                     <h2 className="numbered-heading">Get in touch.</h2>
                 </div>

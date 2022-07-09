@@ -5,7 +5,7 @@ import { Fade } from "react-awesome-reveal";
 const Footer = () => {
     return (
         <footer className="footer">
-            <Fade direction="bottom" triggerOnce={true}>
+            <Fade direction="bottom" triggerOnce={true} delay={200}>
                 <div className="footer-content">
                     <ul className='social-media-footer'>
                         <li>

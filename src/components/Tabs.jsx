@@ -55,7 +55,7 @@ const Tabs = () => {
 
     return (
         <div className='container'>
-            <Fade direction="bottom" triggerOnce={true}>
+            <Fade direction="bottom" triggerOnce={true} delay={200}>
                 <div className="tab-container">
                     <div className='tabs'>
                         {tabs.map((tab, i) =>

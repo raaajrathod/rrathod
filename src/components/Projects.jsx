@@ -67,7 +67,7 @@ const Projects = () => {
 
     return (
         <section className="projects" id="projects">
-            <Fade direction="bottom" triggerOnce={true}>
+            <Fade direction="bottom" triggerOnce={true} delay={200}>
                 <div className="projects_content">
                     <h2 className="numbered-heading">Some of my Projects.</h2>
                 </div>
@@ -76,7 +76,7 @@ const Projects = () => {
                 {featuredProjects.map((project, index) => {
 
                     return (
-                        <Fade direction="bottom" triggerOnce={true}>
+                        <Fade direction="bottom" triggerOnce={true} delay={200}>
                             <li className="project-list-item" key={index}>
                                 <div className="project-content">
                                     <h3 className="project-title">{project.title}</h3>
@@ -102,7 +102,7 @@ const Projects = () => {
                         </Fade>)
                 })}
             </ul>
-            <Fade direction="bottom" triggerOnce={true}>
+            <Fade direction="bottom" triggerOnce={true} delay={200}>
                 <h2 className="subsection-header">Other Noteworthy Projects</h2>
                 <ul className="project-card-container">
                     {noteworthyProjects.map((project, index) => {

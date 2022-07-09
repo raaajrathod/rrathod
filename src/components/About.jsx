@@ -4,7 +4,7 @@ import { Fade } from "react-awesome-reveal";
 const About = () => {
     return (
         <section className="about" id="about">
-            <Fade direction="bottom" triggerOnce={true}>
+            <Fade direction="bottom" triggerOnce={true} delay={200}>
                 <div className="about_content">
                     <h2 className="numbered-heading">About Me.</h2>
                 </div>
