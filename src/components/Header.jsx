@@ -18,7 +18,7 @@ const Header = () => {
                 <nav className="desktop-navigation">
                     <div className="logo">
 
-                        <a href="#home"><img src="/img/logo.png" alt="Raj Rathod" /></a>
+                        <a href="#home"><img src="/img/logo.webp" alt="Raj Rathod" /></a>
                     </div>
                     <div className="navigations">
                         <div className="nav-links desktop-nav">
