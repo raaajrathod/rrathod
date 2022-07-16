@@ -65,8 +65,8 @@ const Tabs = () => {
                     <div className='content'>
                         {tabs.map((tab, i) => {
                             return (
-                                <Fade direction="bottom">
-                                    <div key={i} className={`tab-content ${currentTab == tab.id ? "fadeIn" : "fadeOut"}`}>
+                                <Fade direction="bottom" key={i}>
+                                    <div className={`tab-content ${currentTab == tab.id ? "fadeIn" : "fadeOut"}`}>
                                         <h3>
                                             <span>{tab.tabTitle}</span>
                                             <span className='company'>

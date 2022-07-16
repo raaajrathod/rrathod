@@ -76,8 +76,8 @@ const Projects = () => {
                 {featuredProjects.map((project, index) => {
 
                     return (
-                        <Fade direction="bottom" triggerOnce={true} delay={200}>
-                            <li className="project-list-item" key={index}>
+                        <Fade direction="bottom" triggerOnce={true} delay={200} key={index}>
+                            <li className="project-list-item" >
                                 <div className="project-content">
                                     <h3 className="project-title">{project.title}</h3>
                                     <div className="project-description">

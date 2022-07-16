@@ -1,5 +1,9 @@
 
 import { Fade } from "react-awesome-reveal";
+import Image from 'next/image'
+
+// import Profile Image from public directory
+import ProfileImage from "../../public/img/profile_1.webp";
 
 const About = () => {
     return (
@@ -29,7 +33,7 @@ const About = () => {
                         <div className="wrapper">
                             <div className="inner-wrapper"></div>
                             <div className="img-container">
-                                <img src="../img/profile_1.webp" alt="profile" />
+                                <Image src={ProfileImage} alt="profile" layout='fill' />
                             </div>
                             <div className="profile-photo-overlay"></div>
                         </div>

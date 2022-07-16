@@ -27,13 +27,12 @@ function App() {
             <Projects />
             <Contact />
           </div>
-
           <RightContent />
         </div>
       </main>
       <Footer />
     </Fragment>
-  );
+  )
 }
 
 export default App;
